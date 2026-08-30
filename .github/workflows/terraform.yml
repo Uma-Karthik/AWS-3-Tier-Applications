@@ -37,4 +37,4 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan
+        run: terraform plan -input=false -var="alert_email=${{ secrets.ALERT_EMAIL }}"
