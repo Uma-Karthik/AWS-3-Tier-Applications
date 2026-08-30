@@ -45,3 +45,7 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan -input=false -var="alert_email=${{ secrets.ALERT_EMAIL }}" -var="db_username=${{ secrets.DB_USERNAME }}" -var="db_password=${{ secrets.DB_PASSWORD }}"
+
+      - name: Terraform Apply
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: terraform apply -auto-approve -input=false -var="alert_email=${{ secrets.ALERT_EMAIL }}" -var="db_username=${{ secrets.DB_USERNAME }}" -var="db_password=${{ secrets.DB_PASSWORD }}"
