@@ -1,4 +1,5 @@
-AWS 3-Tier Architecture using Terraform & GitHub Actions
+## AWS 3-Tier Architecture using Terraform & GitHub Actions.
+
 📌 Project Overview
 
 This project demonstrates the deployment of a highly available, scalable, and secure 3-tier architecture on AWS using Terraform Infrastructure as Code (IaC) and GitHub Actions for CI/CD automation.
